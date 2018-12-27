@@ -1,0 +1,14 @@
+<mat-sidenav-container  class="ps-sidenav-container">
+  <mat-sidenav  #sideNav class="ps-sidenav mat-elevation-z10" [mode]="mobileQuery.matches ? 'over' : 'side'"
+  [opened]="!mobileQuery.matches">
+      <mat-toolbar color="primary">
+        Dejavu
+      </mat-toolbar>
+  </mat-sidenav>
+  <mat-sidenav-content class="ps-sidenav-content">
+    <ps-toolbar (toggleSideNav)="sideNav.toggle()"></ps-toolbar>
+    <div class="wrapper">
+        <router-outlet></router-outlet>
+    </div>
+</mat-sidenav-content>
+</mat-sidenav-container>
